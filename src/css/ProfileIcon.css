@@ -1,0 +1,16 @@
+/* src/css/ProfileIcon.css */
+
+.profile-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px;
+}
