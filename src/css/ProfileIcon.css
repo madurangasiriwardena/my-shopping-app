@@ -4,13 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
+    width: 200px; /* Ensure consistent size */
+    height: 200px;
     border-radius: 50%;
     background-color: #007bff;
     color: white;
-    font-size: 4rem;
+    font-size: 6rem; /* Increase font size */
     font-weight: bold;
     text-transform: uppercase;
-    margin: 20px;
 }

@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
-}
+/* src/css/App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: #007bff;
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative; /* Ensure menu positions correctly */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+nav a {
   color: white;
+  margin: 0 1rem;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 50%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  margin-left: auto; /* Push the profile icon to the right */
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: #007bff;
+  position: absolute;
+  top: 3.5rem;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.menu a,
+.menu button {
+  color: white;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu a:hover,
+.menu button:hover {
+  background-color: #0056b3;
+}
+
+.menu.open {
+  display: flex; /* Show menu when profile icon is clicked */
+}
+
+nav button {
+  background-color: #0056b3;
+  border: none;
+  color: white;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #003d80;
+}
+
+.App {
+  padding: 1rem;
+}
+
+h1 {
+  color: #333;
 }

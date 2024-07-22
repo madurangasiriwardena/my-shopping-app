@@ -1,24 +1,25 @@
 // src/Callback.js
 
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import AuthService from './AuthService';
 
-const Callback = () => {
+const Callback: React.FC = () => {
     const navigate = useNavigate();
+    const [isHandled, setIsHandled] = useState(false);
 
     useEffect(() => {
-        // Ensures the callback is handled only once
         const handleAuthCallback = async () => {
-            try {
+            if (!isHandled) {
+                setIsHandled(true);
                 await AuthService.handleCallback();
-                navigate('/');
-            } catch (error) {
-                console.error('Error handling callback:', error);
+                navigate('/home');
             }
         };
+
         handleAuthCallback();
-    }, [navigate]);
+    }, [isHandled, navigate]);
+
     return <div>Loading...</div>;
 };
 
